@@ -1,5 +1,7 @@
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import ProductCard from "../../../component/ProductCard";
+import { useEffect } from "react";
+import { getAll } from "../../../store/product/action";
 
 const contents = [
   {
@@ -75,10 +77,19 @@ const contents = [
 //     </div>
 //   );
 // };
-// export default ProductCatalogPage;
+
 const ProductCatalogPage = (props) => {
   const { entities } = useSelector((state) => state.product);
-  console.log("entities", entities);
+  
+  const dispatch = useDispatch();
+  const fetchProducts = () => {
+    dispatch(getAll());
+  };
+
+  useEffect(() => {
+    fetchProducts();
+  }, [])
+  console.log('entites', entities);
   return (
     <div className="px-[72px] py-[89px] grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 bg-[#EFF4FA]">
       {contents.map((item) => (
@@ -94,6 +105,7 @@ const ProductCatalogPage = (props) => {
         />
       ))}
     </div>
+
   );
 };
 export default ProductCatalogPage;

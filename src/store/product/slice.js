@@ -1,32 +1,32 @@
 import { createSlice } from "@reduxjs/toolkit";
-import getAll from "../../utils/action";
+import { getAll } from "./action";
 export const productSlice = createSlice({
-  nama: "product",
+  name: 'product',
   initialState: {
     loading: false,
     entities: [],
     entity: {
-      id: "",
-      type: "",
-      title: "",
-      desc: "",
-      batch: "",
-      mentor: "",
-      price: "",
-      discount: "",
+      id: '',
+      type:'',
+      title: '',
+      desc: '',
+      batch: '',
+      mentor: '',
+      price: '',
+      discount: '',
     },
     error: null,
   },
   extraReducer: (builder) =>
     builder
-      .addcase(getAll.pending, (state) => {
+      .addCase(getAll.pending, (state) => {
         state.loading = true;
       })
-      .addcase(getAll.fulfiled, (state, { payload }) => {
+      .addCase(getAll.fulfilled, (state, { payload }) => {
         state.loading = false;
-        state.entity = payload;
+        state.entities = payload;
       })
-      .addcase(getAll.rejected, (state, { payload }) => {
+      .addCase(getAll.rejected, (state, { payload }) => {
         state.loading = false;
         state.error = payload;
       }),

@@ -3,6 +3,8 @@ import Layout from "./component/Layout";
 import ProductCatalogPage from "./assets/page/ProductCatalog/ProductCatalog";
 import ProductDetailPage from "./assets/page/ProductDetail/ProductDetail";
 import PaymentCheckoutPage from "./assets/page/PaymentCheckout/PaymentCheckout";
+import { Provider } from "react-redux";
+import store from "./assets/store";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -25,9 +27,9 @@ const router = createBrowserRouter([
 ]);
 const Rout = () => {
   return (
-    <div>
+    <Provider store={store}>
       <RouterProvider router={router} />
-    </div>
+    </Provider>
   );
 };
 

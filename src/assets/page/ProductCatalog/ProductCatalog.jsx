@@ -1,5 +1,6 @@
+import { useSelector } from "react-redux";
 import ProductCard from "../../../component/ProductCard";
-import React from "react";
+
 const contents = [
   {
     type: "Intensive Bootcamp",
@@ -11,7 +12,7 @@ const contents = [
   },
   {
     type: "Intensive Curse",
-    title: "pgraming laravel",
+    title: "programing laravel",
     desc: "Getting Started with Laravel",
     batch: "September 2022",
     mentor: "Farel Hartono dan William",
@@ -56,7 +57,28 @@ const contents = [
   },
 ];
 
+// const ProductCatalogPage = (props) => {
+//   return (
+//     <div className="px-[72px] py-[89px] grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 bg-[#EFF4FA]">
+//       {contents.map((item) => (
+//         <ProductCard
+//           key={item.title}
+//           type={item.type}
+//           title={item.title}
+//           price={item.price}
+//           desc={item.desc}
+//           discountPrice={item.discountPrice}
+//           batch={item.batch}
+//           mentor={item.mentor}
+//         />
+//       ))}
+//     </div>
+//   );
+// };
+// export default ProductCatalogPage;
 const ProductCatalogPage = (props) => {
+  const { entities } = useSelector((state) => state.product);
+  console.log("entities", entities);
   return (
     <div className="px-[72px] py-[89px] grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 bg-[#EFF4FA]">
       {contents.map((item) => (

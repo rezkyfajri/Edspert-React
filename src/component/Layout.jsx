@@ -10,22 +10,14 @@ const navItems = [
 const Layout = () => {
   return (
     <>
-      <header className="text-white bg-transparent fixed px-[5%] py-[0.2rem] z-10 top-0 left-0 right-0">
-        <div className="flex justify-between  pt-[28px]">
+      <header className="bg-[#152A46] text-white  fixed px-[5%] py-[0.2rem] z-10 top-0 left-0 right-0">
+        <div className="flex justify-between  py-[28px]">
           <h1 className="text-[20px] font-bold text-white-700">LOGO</h1>
           <nav>
             <ListNavigation items={navItems} />
           </nav>
         </div>
       </header>
-      <div className=" bg-[#152A46] px-[120px] py-[5rem]  h-[584px] relative">
-        <h1>Jadi expert Bersama Edspert.id</h1>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste animi
-          ipsum vero perspiciatis, sed quibusdam.
-        </p>
-        <img className="absolute " src="/src/assets/img/Hero.png" alt="" />
-      </div>
 
       <Outlet />
 

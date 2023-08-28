@@ -1,10 +1,10 @@
 import { useDispatch, useSelector } from "react-redux";
-import ProductCard from "../../../component/ProductCard";
 import { useEffect } from "react";
 import { getAll } from "../../../store/product/action";
 import { useNavigate } from "react-router-dom";
+import "./ProductCatalog.css";
 
-const ProductCatalogPage = (props) => {
+const ProductCatalogPage = () => {
   const { entities } = useSelector((state) => state.product);
 
   const dispatch = useDispatch();
@@ -22,18 +22,21 @@ const ProductCatalogPage = (props) => {
   return (
     <div className="mulish">
       <div className=" bg-[#152A46] h-[584px] relative">
-        <div className="pt-[174px] pl-[120px]">
-          <h1 className=" tetx">Jadi expert Bersama Edspert.id</h1>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste animi
-            ipsum vero perspiciatis, sed quibusdam.
+        <div className="pt-[174px] pl-[120px] z-[1]">
+          <h1 className="font-semibold text-[42px] text-white be-vie ">
+            Jadi expert Bersama <br />
+            Edspert.id
+          </h1>
+          <p className="be-vie text-white text-[16px] font-normal">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br />
+            Iste animi ipsum vero perspiciatis, sed quibusdam.
           </p>
         </div>
-        <div className=" w-[819px] absolute right-0 top-[76px] z-[1]">
-          <img className="w-[100%]" src="/src/assets/img/Hero.png" alt="" />
+        <div className="w-[819px]  right-0 top-[76px] absolute ">
+          <img className=" w-[100%]" src="/src/assets/img/Hero.png" alt="" />
         </div>
       </div>
-      <div className="px-[72px] py-[89px] grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 bg-[#EFF4FA]">
+      <div className="px-[72px] py-[89px] grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 bg-[#EFF4FA] relative">
         {entities.map((product) => {
           return (
             <section
@@ -56,7 +59,7 @@ const ProductCatalogPage = (props) => {
                     {product.title}
                   </p>
                   <p className="font-normal text-[12px] text-white">
-                    ({props.desc})
+                    ({product.desc})
                   </p>
                 </div>
               </div>
@@ -64,7 +67,7 @@ const ProductCatalogPage = (props) => {
                 <h2 className="font-extrabold text-[20px] text-black capitalize">
                   {product.title}
                 </h2>
-                <p className="text-[17px] font-extrabold ">{props.desc}</p>
+                <p className="text-[17px] font-extrabold ">{product.desc}</p>
                 <p className="text-[12px] font-semibold pt-[7px]">
                   <span className="opacity-50 pr-[16px]">Batch</span>
                   {product.batch}
@@ -73,7 +76,13 @@ const ProductCatalogPage = (props) => {
                   <span className="opacity-50 pr-[9px]">Mentor</span>
                   {product.mentor}
                 </p>
-                {/* <ShowPrice products={props} /> */}
+                <p className="pb-[16px] text-[#0ACF83] font-extrabold ">
+                  <s className="text-black text-[15px] font-medium pb-[22px] pl-[125px]">
+                    Rp.{product.price}
+                  </s>
+                  Rp.
+                  {product.discount}
+                </p>
               </div>
             </section>
           );

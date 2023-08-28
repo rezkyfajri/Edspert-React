@@ -21,10 +21,10 @@ const Layout = () => {
 
       <Outlet />
 
-      <div className="bg-[#152A46] text-white py-[20px] text-center px-[4rem]">
-        <div className="flex justify-between">
-          <div className="items-center">
-            <p>TAGline Edspert disini</p>
+      <div className="bg-white text-[#a3a3a3] h-[587px] px-[5%] ">
+        <div className="flex justify-between items-center h-[70%]  ">
+          <div className="w-[422px]">
+            <p>TAGLINE Edspert disini </p>
             <p>
               Jl waltu gede Lorem ipsum dolor sit amet consectetur adipisicing
               elit. Porro, deserunt?
@@ -82,7 +82,9 @@ const Layout = () => {
             </ul>
           </div>
         </div>
-        <p>Edspert, Copyright. Lorem ipsum dolor sit amet.</p>
+        <p className="text-end pl-">
+          Edspert, Copyright. Lorem ipsum dolor sit amet.
+        </p>
       </div>
     </>
   );

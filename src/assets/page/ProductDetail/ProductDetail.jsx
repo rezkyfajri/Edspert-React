@@ -29,7 +29,7 @@ const ProductDetailPage = () => {
           <p className="text-[20px] text-white font-">{entity.mentor}</p>
         </div>
         <div className="w-[819px]  right-0 top-[76px] absolute ">
-          <img className=" w-[100%]" src="/src/assets/img/Hero.png" alt="" />
+          <img className=" w-[100%]" src={"/assets/img/Hero.png"} alt="" />
         </div>
       </div>
       <div className="relative">

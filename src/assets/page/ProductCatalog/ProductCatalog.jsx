@@ -33,7 +33,11 @@ const ProductCatalogPage = () => {
           </p>
         </div>
         <div className="w-[819px]  right-0 top-[76px] absolute ">
-          <img className=" w-[100%]" src="/src/assets/img/Hero.png" alt="" />
+          <img
+            className=" w-[100%]"
+            src={"/assets/img/Hero.png"}
+            alt="Hero Banner"
+          />
         </div>
       </div>
       <div className="px-[72px] py-[89px] grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 bg-[#EFF4FA] relative">
@@ -47,9 +51,8 @@ const ProductCatalogPage = () => {
               <div className="flex rounded-t-[20px] bg-[#152A46]">
                 <img
                   className="ml-[28px] mt-[16px] w-[75px]"
-                  src="./src/assets/img/person.png
-              "
-                  alt=""
+                  src={"/assets/img/person.png"}
+                  alt="person"
                 />
                 <div className="pl-[17px] mt-[17px] ">
                   <h2 className="text-[#ffcd29] font-extrabold text-[16px]">

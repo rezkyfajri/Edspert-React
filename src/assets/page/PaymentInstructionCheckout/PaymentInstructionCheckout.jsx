@@ -23,7 +23,7 @@ const PaymentInstructionCheckoutPage = () => {
             <div className="w-[120px] h-[110px] bg-[#2B3E58] flex justify-center items-center rounded-[10px]">
               <img
                 className="h-[100%] "
-                src="/src/assets/img/person.png"
+                src={"/assets/img/person.png"}
                 alt=""
               />
             </div>

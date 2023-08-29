@@ -36,9 +36,13 @@ const ProductDetailPage = () => {
         <div className="flex w-[100%] bg-[#EFF4FA]">
           <div className="w-[30%]">
             <div className="bg-white w-[308px] h-[256px] ml-[74px] mt-[76px] rounded-[15px]  pt-[18px] ">
-              <p className="my-[13px] pl-[72px]">materi</p>
-              <p className="pl-[72px]">Fasilitas</p>
-              <div className="flex w-[100%] p-[1rem] justify-between">
+              <p className="border-solid border-[2px] mt-[13px] py-[0.5rem] pl-[72px] cursor-pointer">
+                Materi
+              </p>
+              <p className="border-solid border-[2px] py-[0.5rem] pl-[72px] cursor-pointer">
+                Fasilitas
+              </p>
+              <div className="flex w-[100%] px-[1rem] pt-[1rem] justify-between">
                 <p>
                   <s>Rp.{entity.price}</s>
                 </p>
@@ -56,22 +60,60 @@ const ProductDetailPage = () => {
           </div>
           <div className="w-[900px]">
             <div className="bg-white pl-[61px] pt-[38px]  mt-[76px] rounded-[15px]">
-              <h1 className="be-vie text-[30px] font-bold">Materi</h1>
-              <ul>
-                <li>Nanti ambil dari data dari axios </li>
-                <li>Nanti ambil dari data dari axios </li>
-                <li>Nanti ambil dari data dari axios </li>
-                <li>Nanti ambil dari data dari axios </li>
-                <li>Nanti ambil dari data dari axios </li>
+              <h1 className="be-vie text-[30px] font-extrabold">Materi</h1>
+              <ul className="pt-[5px]">
+                <li className="be-vie text-[20px] font-semibold pt-[8px]">
+                  {entity.materi1}
+                  <p className="font-normal text-[14px] pt-[5px]">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Ipsum, pariatur.
+                  </p>
+                </li>
+                <li className="be-vie text-[20px] font-semibold pt-[8px]">
+                  {entity.materi2}
+                  <p className="font-normal text-[14px] pt-[5px]">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Ipsum, pariatur.
+                  </p>
+                </li>
+                <li className="be-vie text-[20px] font-semibold pt-[8px]">
+                  {entity.materi3}
+                  <p className="font-normal text-[14px] pt-[5px]">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Ipsum, pariatur.
+                  </p>
+                </li>
+                <li className="be-vie text-[20px] font-semibold pt-[8px]">
+                  {entity.materi4}
+                  <p className="font-normal text-[14px] pt-[5px]">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Ipsum, pariatur.
+                  </p>
+                </li>
+                <li className="be-vie text-[20px] font-semibold pt-[8px]">
+                  {entity.materi5}
+                  <p className="font-normal text-[14px] pt-[5px]">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Ipsum, pariatur.
+                  </p>
+                </li>
               </ul>
             </div>
             <div className="bg-white pl-[61px] pt-[38px]   mt-[76px] rounded-[15px]">
-              <h1>Fasilitas</h1>
+              <h1 className="be-vie text-[30px] font-extrabold">Fasilitas</h1>
               <ul>
-                <li>E-Sertifikat</li>
-                <li>Portfolio</li>
-                <li>Job Connector</li>
-                <li>Career Development</li>
+                <li className="be-vie text-[20px] font-semibold pt-[8px]">
+                  E-Sertifikat
+                </li>
+                <li className="be-vie text-[20px] font-semibold pt-[8px]">
+                  Portfolio
+                </li>
+                <li className="be-vie text-[20px] font-semibold pt-[8px]">
+                  Job Connector
+                </li>
+                <li className="be-vie text-[20px] font-semibold pt-[8px]">
+                  Career Development
+                </li>
               </ul>
             </div>
           </div>

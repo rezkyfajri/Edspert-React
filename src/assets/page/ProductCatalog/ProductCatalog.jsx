@@ -2,7 +2,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 import { getAll } from "../../../store/product/action";
 import { useNavigate } from "react-router-dom";
-import "./ProductCatalog.css";
 
 const ProductCatalogPage = () => {
   const { entities } = useSelector((state) => state.product);
@@ -46,7 +45,7 @@ const ProductCatalogPage = () => {
             <section
               onClick={() => goToProductDetail(product.id)}
               key={product.title}
-              className="ml-[72px] mb-[72px] w-[352px] font-mulish cursor-pointer"
+              className="m-[50px] w-[352px] font-mulish cursor-pointer"
             >
               <div className="flex rounded-t-[20px] bg-[#152A46]">
                 <img
